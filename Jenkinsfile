@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    sh 'docker build -t ${IMAGE_NAME} .'
+                    bat 'docker build -t ${IMAGE_NAME} .'
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Run the container
-                    sh 'docker run ${IMAGE_NAME}'
+                    bat 'docker run ${IMAGE_NAME}'
                 }
             }
         }
@@ -28,8 +28,8 @@ pipeline {
             steps {
                 script {
                     // Push image to Docker Hub (optional)
-                    sh 'docker tag ${IMAGE_NAME} yourusername/${IMAGE_NAME}'
-                    sh 'docker push yourusername/${IMAGE_NAME}'
+                    bat 'docker tag ${IMAGE_NAME} yourusername/${IMAGE_NAME}'
+                    bat 'docker push yourusername/${IMAGE_NAME}'
                 }
             }
         }
