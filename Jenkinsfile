@@ -42,8 +42,8 @@ pipeline {
             steps {
                 script {
                     // Tag and push the image to Docker Hub
-                    bat "docker tag %IMAGE_NAME% yourusername/%IMAGE_NAME%"
-                    bat "docker push yourusername/%IMAGE_NAME%"
+                    bat "docker tag %IMAGE_NAME% meghanamk24/dockerdemo"
+                    bat "docker push meghanamk24/dockerdemo"
                 }
             }
         }
